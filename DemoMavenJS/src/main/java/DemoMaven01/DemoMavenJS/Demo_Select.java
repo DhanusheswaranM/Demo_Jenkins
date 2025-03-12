@@ -20,15 +20,20 @@ public class Demo_Select {
 		dvr.manage().window().maximize();
 		WebElement multi = dvr.findElement(By.xpath("//select[@name=\"multi\"]"));
 		Select selectdropdown = new Select(multi);
+		
 		List<WebElement> list = selectdropdown.getOptions();
+		
 		System.out.println("The size of dropdown options "+list.size());
 		for(WebElement li:list) {
 			System.out.println("The dropdown options are "+li.getText());
 		}
+		
 		selectdropdown.deselectAll();
 		selectdropdown.selectByIndex(0);
 		selectdropdown.selectByVisibleText("Onion gravy");
+		
 		List<WebElement> list1 = selectdropdown.getAllSelectedOptions();
+		
 		for(WebElement l:list1) {
 			System.out.println("The selected options "+l.getText());
 		}
