@@ -32,7 +32,7 @@ public class Demo_Select {
 		for(WebElement l:list1) {
 			System.out.println("The selected options "+l.getText());
 		}
-		System.out.println("order text");
+		System.out.println("-----------order text------------");
 		List<String> text = new ArrayList<>();
 		for(WebElement li:list) {
 			text.add(li.getText());
@@ -41,6 +41,7 @@ public class Demo_Select {
 		for(String t:text) {
 			System.out.println(t);
 		}
+		System.out.println("-------------------------------");
 		System.out.println("the selectdropdown is multiple :"+selectdropdown.isMultiple());
 		selectdropdown.deselectByVisibleText("Eggs");
 		selectdropdown.deselectAll();
