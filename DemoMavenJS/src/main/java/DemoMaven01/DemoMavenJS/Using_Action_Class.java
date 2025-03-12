@@ -1,6 +1,4 @@
 package DemoMaven01.DemoMavenJS;
-
-
 import java.time.Duration;
 
 import org.openqa.selenium.By;
