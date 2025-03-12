@@ -26,7 +26,6 @@ public class With_Select_Class {
 		System.out.println("The dropdown is multiple option or not :"+selectdropdown.isMultiple());
 		selectdropdown.selectByIndex(2);
 //		selectdropdown.selectByVisibleText("Cypress");
-		selectdropdown.deselectAll();
 		
 	}
 
