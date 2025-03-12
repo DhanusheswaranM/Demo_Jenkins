@@ -3,6 +3,8 @@ package DemoMaven01.DemoMavenJS;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -29,6 +31,15 @@ public class Demo_Select {
 		List<WebElement> list1 = selectdropdown.getAllSelectedOptions();
 		for(WebElement l:list1) {
 			System.out.println("The selected options "+l.getText());
+		}
+		System.out.println("order text");
+		List<String> text = new ArrayList<>();
+		for(WebElement li:list) {
+			text.add(li.getText());
+		}
+		Collections.sort(text);
+		for(String t:text) {
+			System.out.println(t);
 		}
 		System.out.println("the selectdropdown is multiple :"+selectdropdown.isMultiple());
 		selectdropdown.deselectByVisibleText("Eggs");
