@@ -18,7 +18,7 @@ public class Windows_Handle_Practise {
 		WebDriver dvr = new ChromeDriver();
 		dvr.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		dvr.manage().window().maximize();
-//		WebDriverWait wait = new WebDriverWait(dvr,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(dvr,Duration.ofSeconds(10));
 		dvr.get("https://www.leafground.com/dashboard.xhtml");
 		String parent = dvr.getWindowHandle();
 		System.out.println("Parent title "+dvr.getTitle());
@@ -29,7 +29,7 @@ public class Windows_Handle_Practise {
 		Actions act = new Actions(dvr);
 		WebElement dropdown = dvr.findElement(By.id("menuform:j_idt39"));
 		act.moveToElement(dropdown).click().perform();
-		WebElement windows = dvr.findElement(By.xpath("//span[contains(text(),\"Window\")]"));
+		WebElement windows = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Window')]")));
 		windows.click();
 		dvr.manage().window().maximize();
 		System.out.println("Alert title "+dvr.getTitle());
