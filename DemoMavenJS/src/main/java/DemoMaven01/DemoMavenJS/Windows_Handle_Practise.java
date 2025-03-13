@@ -57,7 +57,7 @@ public class Windows_Handle_Practise {
 		System.out.println("New tab opened: "+tab);
 		System.out.println("count of new tab : "+tab.size());
 		
-		dvr.quit();
+		dvr.close();
 		
 	}
 
