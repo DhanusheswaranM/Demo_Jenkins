@@ -36,8 +36,8 @@ public class WindowsHandle {
 		System.out.println("Main Window : "+mainwindow);
 		System.out.println("Child Window : "+childwindow);
 		dvr.switchTo().window(childwindow);
-		WebElement text = dvr.findElement(By.id("sampleHeading"));
-		System.out.println("Child Title : "+text.getText());
+//		WebElement text = dvr.findElement(By.id("sampleHeading"));
+//		System.out.println("Child Title : "+text.getText());
 		
 
 	}
