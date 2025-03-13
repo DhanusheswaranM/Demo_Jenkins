@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,10 +16,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Windows_Handle_Practise {
 
 	public static void main(String[] args) {
-		WebDriver dvr = new ChromeDriver();
-		dvr.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		dvr.manage().window().maximize();
-		WebDriverWait wait = new WebDriverWait(dvr,Duration.ofSeconds(10));
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriver dvr = new ChromeDriver(options);
+        dvr.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        dvr.manage().window().maximize();
+        WebDriverWait wait = new WebDriverWait(dvr, Duration.ofSeconds(10));
 		dvr.get("https://www.leafground.com/dashboard.xhtml");
 		String parent = dvr.getWindowHandle();
 		System.out.println("Parent title "+dvr.getTitle());
