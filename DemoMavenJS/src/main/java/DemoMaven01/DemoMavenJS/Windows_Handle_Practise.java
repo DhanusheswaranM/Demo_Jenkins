@@ -28,7 +28,7 @@ public class Windows_Handle_Practise {
 		
 		Actions act = new Actions(dvr);
 		WebElement dropdown = dvr.findElement(By.id("menuform:j_idt39"));
-		act.moveToElement(dropdown).click().build().perform();
+		act.moveToElement(dropdown).click().perform();
 		WebElement windows = dvr.findElement(By.xpath("//span[contains(text(),\"Window\")]"));
 		windows.click();
 		dvr.manage().window().maximize();
