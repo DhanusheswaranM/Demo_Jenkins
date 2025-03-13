@@ -31,10 +31,11 @@ public class Windows_Handle_Practise {
 		act.moveToElement(dropdown).click().build().perform();
 		WebElement windows = dvr.findElement(By.xpath("//span[contains(text(),\"Window\")]"));
 		windows.click();
+		dvr.manage().window().maximize();
 		System.out.println("Alert title "+dvr.getTitle());
 		
-		WebElement newwindow = dvr.findElement(By.xpath("//button[@id=\"j_idt88:new\"]//span[contains(text(),\"Open\")]"));
-		act.moveToElement(newwindow).click().build().perform();
+//		WebElement newwindow = dvr.findElement(By.xpath("//button[@id=\"j_idt88:new\"]//span[contains(text(),\"Open\")]"));
+//		act.moveToElement(newwindow).click().build().perform();
 		String child1 = dvr.getWindowHandle();
 		System.out.println("newwindow title "+dvr.getTitle());
 		Set<String> window1 = dvr.getWindowHandles();
@@ -47,15 +48,16 @@ public class Windows_Handle_Practise {
 		
 		WebElement newtab = dvr.findElement(By.xpath("//span[contains(text(),\"Open Multiple\")]"));
 		act.moveToElement(newtab).click().perform();
+		dvr.manage().window().maximize();
 		String child2 = dvr.getWindowHandle();
-		System.out.println("newtab title "+dvr.getTitle());
-//		dvr.switchTo().window(child1);
-		dvr.close();
+//		System.out.println("newtab title "+dvr.getTitle());
+		dvr.switchTo().window(parent);
+		//dvr.close();
 		Set<String> tab = dvr.getWindowHandles();
 		System.out.println("New tab opened: "+tab);
 		System.out.println("count of new tab : "+tab.size());
 		
-//		dvr.quit();
+		dvr.quit();
 		
 	}
 
