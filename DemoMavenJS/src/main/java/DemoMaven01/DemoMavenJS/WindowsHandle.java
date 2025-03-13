@@ -23,7 +23,6 @@ public class WindowsHandle {
         WebDriverWait wait = new WebDriverWait(dvr, Duration.ofSeconds(10));
 		dvr.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		dvr.manage().window().maximize();
-		WebDriverWait wait = new WebDriverWait(dvr,Duration.ofSeconds(10));
 		dvr.get("http://demoqa.com/browser-windows");
 		String parent = dvr.getWindowHandle();
 		System.out.println("Parent window " +parent);
