@@ -44,7 +44,7 @@ public class Windows_Handle_Practise {
 		Set<String> window1 = dvr.getWindowHandles();
 		System.out.println("Child window : "+window1);
 		System.out.println("count of new window : "+window1.size());
-		
+	
 		Iterator<String> it = window1.iterator();
 		dvr.switchTo().window(it.next());
 		System.out.println("switched to Child window");

@@ -44,6 +44,7 @@ public class WindowsHandle {
 		WebElement text = dvr.findElement(By.id("sampleHeading"));
 		System.out.println("Child Title : "+text.getText());
 		
+		
 
 	}
 

@@ -1,5 +1,5 @@
 package DemoMaven01.DemoMavenJS;
-
+ 
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.function.Function;
@@ -26,7 +26,7 @@ public class Fluent_WAIT {
 			public WebElement apply(WebDriver dvr) {
 				return dvr.findElement(By.cssSelector(".hmbseindicestable>ul:nth-child(2)>li:nth-child(2)"));
 			}
-			
+		
 		});
 		String msg = BSE.getText();
 		System.out.println(msg);
